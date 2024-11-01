@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospiGo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        /* background: linear-gradient(to right, #0baff6, #0baff6); */
+        /* Gradient background */
+        color: white;
+        /* White text color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        /* Shadow effect on text */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        /* Shadow effect on navbar */
+    }
+
+    .navbar-brand img {
+        width: 80px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Increased font size */
+        margin-bottom: 0;
+        vertical-align: middle;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        /* Shadow effect on text */
+    }
+
+    .navbar-nav .nav-link {
+        color: black !important;
+        /* White text color for links */
+        font-size: 1.5rem; /* Increased font size */
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+        /* Shadow effect on text */
+        margin-right: 35px; /* Added space between navbar items */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #0baff6 !important;
+        /* White text color on hover */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Light background color on hover */
+    }
+
+    .background-image {
+        background-image: url('https://img.freepik.com/free-photo/side-view-doctor-holding-stethoscope_23-2149994395.jpg?t=st=1714045238~exp=1714048838~hmac=1efec5078772839f15561eab5af667fc03a6ea22bb6b24549733821beacb743b&w=1380');
+        background-size: cover;
+        background-position: center;
+        padding: 300px 0;
+        border-radius: 0px;
+        margin-top: 0px; /* Height of the navbar */
+        position: relative;
+        z-index: -1; /* Ensure the background is behind other content */
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .bold-text {
+        font-weight: bold; /* Making the text bold */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 10px #262728; /* Adding text shadow and glow */
+        color: #0f0f10; /* Changing text color */
+        opacity: 0; /* Initially hide the text */
+        animation: slideFromLeft 1s ease forwards; /* Apply animation */
+    }
+
+    .paragraph-text {
+        font-size: 1.25rem; /* Increased font size */
+        margin-top: 15px; /* Added space above the paragraph */
+        opacity: 0; /* Initially hide the paragraph */
+        animation: slideFromLeft 1s ease forwards; /* Apply animation */
+    }
+
+    @keyframes slideFromLeft {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg"
+                    alt="Health Care Logo">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/">Hospital Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/signup">Hospital Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/">Admin Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/patient/register">User Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/patient/login">User Login</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-image">
+        <div class="container">
+            <!-- Your content goes here -->
+            <h1 class="bold-text">Your Well being is our Priority!!!</h1>
+            <p class="paragraph-text">Welcome to our Hospital recommendation system.<br>Finding the right care starts here.<br>Explore user-friendly health care services.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- <div class="container">
+        <div class="header">
+            <!-- Add class "animated-text" to apply animation -
+            <h2 class="animated-text">Welcome to Hospigo!</h2>
+            <!-- Add class "animated-text" to apply animation -
+            <p class="animated-text">Hospigo is your one-stop solution for all healthcare needs. Whether you're a
+                hospital looking for a reliable recommendation system or a patient in need of quality care, Hospigo has
+                got you covered.</p>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container hospital-bg">
+        <div class="row">
+            <div class="col-md-4">
+                <p><img src="https://img.freepik.com/free-photo/medical-banner-with-stethoscope_23-2149611199.jpg?size=338&ext=jpg&ga=GA1.1.553209589.1713916800&semt=sph"
+                        alt="Hospital Image" class="healthcare-image"></p>
+            </div>
+            <div class="col-md-4">
+                <p><img src="https://image.freepik.com/free-photo/healthcare-medical-concept-patient-doctor-holding-stethoscope-hospital_1150-27161.jpg"
+                        alt="Hospital Image" class="healthcare-image"></p>
+            </div>
+            <div class="col-md-4">
+                <p><img src="https://image.freepik.com/free-photo/smiling-woman-looking-camera-doctor-s-background_1150-32274.jpg"
+                        alt="Hospital Image" class="healthcare-image"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2 class="animated-text">About Hospigo!</h2>
+            <p class="animated-text">Hospigo is your one-stop solution for all healthcare needs. Whether you're a
+                hospital looking for a reliable recommendation system or a patient in need of quality care, Hospigo has
+                got you covered.</p>
+            <p class="animated-text">With our user-friendly platform, you can easily connect with healthcare providers,
+                schedule appointments, and access essential medical resources.</p>
+            <p class="animated-text">Experience the convenience and efficiency of modern healthcare services with
+                Hospigo.</p>
+            <p class="animated-text-scale">Join us today and take control of your health journey!</p>
+        </div>
+        <hr>
+    </div>-->
+
+<!--<div class="container additional-healthcare">
+        <h3>Explore More About Healthcare</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://image.freepik.com/free-photo/medical-stethoscope-white_1150-2501.jpg"
+                    alt="Stethoscope" class="healthcare-image">
+                <p class="healthcare-description">Stethoscope</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://image.freepik.com/free-photo/medical-tools-with-medicine-vials_53876-25707.jpg"
+                    alt="Medical Tools" class="healthcare-image">
+                <p class="healthcare-description">Medical Tools</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://image.freepik.com/free-photo/medical-phonendoscope-nurse-holding-saline-bag-hospital_1150-11641.jpg"
+                    alt="Phonendoscope" class="healthcare-image">
+                <p class="healthcare-description">Phonendoscope</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://image.freepik.com/free-photo/smiling-mature-woman-doctor-medical-coat-sitting-table-with-medicine-clinic-interior-health-care-worker-concept_18591-74252.jpg"
+                    alt="Doctor" class="healthcare-image">
+                <p class="healthcare-description">Doctor</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope"></i> Email: info@hospigo.com</p>
+                    <p><i class="fas fa-phone-alt"></i> Phone: +123-456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: 123 Healthcare St, City, Country</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Hospigo. All rights reserved.</p>
+                    <p><small>Designed with <i class="fas fa-heart text-danger"></i> by Hospigo Team</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Hospigo. All rights reserved.</p>
+                <p><small>Designed with <i class="fas fa-heart text-danger"></i> by Hospigo Team</small></p>
+            </div>
+        </div>
+        </div>
+    </footer>-->
