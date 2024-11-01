@@ -1,0 +1,48 @@
+{% extends "user/layout.html" %}
+
+{% block content %}
+<div class="container">
+    {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}" role="alert">
+        <strong>{{ message }}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% include 'user/navbar.html' %}
+    <div class="container">
+        <div class="my-2">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Hospital Name</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone No</th>
+                            <th scope="col">Treatment Available</th>
+                            <th scope="col">Estimated Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.hname }}</td>
+                            <td>{{ user.city }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.phoneno }}</td>
+                            <td>{{ user.treatment }}</td>
+                            <td>{{ user.estimated }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
