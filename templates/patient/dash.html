@@ -1,0 +1,71 @@
+{% extends "patient/layout.html" %}
+
+{% block content %}
+<div class="container">
+    {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Search Hospitals
+                </div>
+                <div class="card-body">
+                    <form method="GET" action="{{ url_for('userDashboard2') }}">
+                        <div class="mb-3">
+                            <label for="filter_by" class="form-label">Search Hospital By:</label>
+                            <select class="form-select" id="filter_by" name="filter_by">
+                                <option value="city">City</option>
+                                <option value="treatment">Treatment Available</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="search_text" class="form-label">Enter the City/Disease Name:</label>
+                            <input type="text" class="form-control" id="search_text" name="search_text">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get Recommendation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Hospital Name</th>
+                    <th>City</th>
+                    <th>Email</th>
+                    <th>Phone no</th>
+                    <th>Treatment Available</th>
+                    <th>Estimated cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in user1 %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.hname }}</td>
+                    <td>{{ user.city }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.phoneno }}</td>
+                    <td>{{ user.treatment }}</td>
+                    <td>{{ user.estimated }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
