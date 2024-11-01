@@ -1,0 +1,59 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+<div class="container">
+    {% include 'admin/navbar.html' %}
+    <div class="my-4">
+        <form action="" method="POST" style="width:100%">
+            <div class="input-group">
+                <input type="text" name="search" id="search" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-success">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="my-4">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Hospital Name</th>
+                        <th>City</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Treatment Available</th>
+                        <th>Estimated Cost</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.hname }}</td>
+                        <td>{{ user.city }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phoneno }}</td>
+                        <td>{{ user.treatment }}</td>
+                        <td>{{ user.estimated }}</td>
+                        <td>
+                            {% if user.status == 1 %}
+                            <span class="badge badge-success">Approved</span>
+                            {% else %}
+                            <a href="/admin/approve-user/{{ user.id }}">
+                                <button class="btn btn-warning">Approve</button>
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}
